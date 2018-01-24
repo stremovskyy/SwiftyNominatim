@@ -18,8 +18,11 @@ class ViewController: UIViewController {
     
         let str = "{\"place_id\":\"833873\",\"licence\":\"Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright\",\"osm_type\":\"way\",\"osm_id\":\"179245540\",\"lat\":\"50.03876835\",\"lon\":\"36.2184867938686\",\"display_name\":\"45/3 к2, Науки проспект, Госпром, Харьков, Шевченковский район, Харьковский городской совет, Харьковская область, 61000-61499, Украина\",\"address\":{\"house_number\":\"45/3 к2\",\"road\":\"Науки проспект\",\"suburb\":\"Госпром\",\"city\":\"Харьков\",\"county\":\"Харьковский городской совет\",\"state\":\"Харьковская область\",\"postcode\":\"61000-61499\",\"country\":\"Украина\",\"country_code\":\"ua\"},\"boundingbox\":[\"50.0385095\",\"50.0389307\",\"36.2182205\",\"36.2187263\"]}"
         
+        let starit = "[{\"place_id\":\"1844149\",\"licence\":\"Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright\",\"osm_type\":\"node\",\"osm_id\":\"5357674284\",\"boundingbox\":[\"50.0385017\",\"50.0386017\",\"36.2184484\",\"36.2185484\"],\"lat\":\"50.0385517\",\"lon\":\"36.2184984\",\"display_name\":\"Компания Megakit, 45/3 к2, Науки проспект, Павлово Поле, Харьков, Шевченковский район, Харьковский городской совет, Харьковская область, 61000-61499, Украина\",\"place_rank\":\"30\",\"category\":\"office\",\"type\":\"it\",\"importance\":0.101,\"address\":{\"address29\":\"Компания Megakit\",\"house_number\":\"45/3 к2\",\"road\":\"Науки проспект\",\"suburb\":\"Павлово Поле\",\"city\":\"Харьков\",\"county\":\"Харьковский городской совет\",\"state\":\"Харьковская область\",\"postcode\":\"61000-61499\",\"country\":\"Украина\",\"country_code\":\"ua\"},\"extratags\":{\"website\":\"http://megakit.pro\",\"wheelchair\":\"yes\",\"description\":\"Специализируемся на автоматизации и интеграции малого и среднего транспортного бизнеса. Разработка мобильных приложений. Кроссплатформенные решения. Облачные технологии и геотаргетинг. Богатый опыт разработки комплексных систем автоматизации.\",\"opening_hours\":\"Mo-Su 10:00-20:00\"},\"namedetails\":{\"name\":\"Компания Megakit\"}}]"
+        
         
         dump(nominatim.parseReversePayloadWith(jsonString: str ))
+        dump(nominatim.parseStraightPayloadWith(jsonString: starit))
         
     }
 

@@ -24,6 +24,7 @@ public class Nominatim {
     /// Log file
     var log = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "Nominatim")
 
+    /// Empty init
     public init() {}
     
     /// init Class with JSON String from nominatim
@@ -32,12 +33,10 @@ public class Nominatim {
         self.format = format
     }
     
-    /**
-     Parses String JSON and decodes it to ReversePayload data object
-     
-     - parameter jsonString: JSON String with from reverse geocoding
-     - returns: ReversePayload object or nil if it can't be decode into ReversePayload
-     */
+    /// Parses String JSON and decodes it to ReversePayload data object
+    ///
+    /// - Parameter jsonString: JSON String with from reverse geocoding
+    /// - Returns: ReversePayload object or nil if it can't be decode into ReversePayload
     public func parseReversePayloadWith(jsonString: String) -> ReversePayload? {
         let jsonData = jsonString.data(using: .utf8)
         let decoder = JSONDecoder()
@@ -47,6 +46,25 @@ public class Nominatim {
             return payload
         } catch {
             os_log("Cannot parse payload from reverse packet", log: self.log, type: .error)
+        }
+        return nil
+    }
+    
+    /**
+     Parses String JSON and decodes it to StraightPayload data object
+     
+     - parameter jsonString: JSON String with from straight geocoding
+     - returns: StraightPayload object or nil if it can't be decode into StraightPayload
+     */
+    public func parseStraightPayloadWith(jsonString: String) -> [StraightPayload]? {
+        let jsonData = jsonString.data(using: .utf8)
+        let decoder = JSONDecoder()
+        
+        do {
+            let payload = try decoder.decode([StraightPayload].self, from: jsonData!)
+            return payload
+        } catch {
+            os_log("Cannot parse payload from straight packet", log: self.log, type: .error)
         }
         return nil
     }
