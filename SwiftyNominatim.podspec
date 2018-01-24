@@ -31,7 +31,7 @@ Simple SwiftyNominatim Pod for use osm nominatim with swift 4
   s.ios.deployment_target = '10.0'
   s.module_name = "Nominatim"
 
-  #s.source_files = 'SwiftyNominatim/Classes/**/*'
+  s.source_files = 'SwiftyNominatim/Classes/**/*'
   
   # s.resource_bundles = {
   #   'SwiftyNominatim' => ['SwiftyNominatim/Assets/*.png']
