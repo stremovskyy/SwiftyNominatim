@@ -23,13 +23,13 @@ public struct Address: Codable {
     var countryCode: String
     
     enum CodingKeys : String, CodingKey {
-        case road
+        case road = "road"
         case subUrban = "suburb"
-        case city
-        case county
-        case state
+        case city = "city"
+        case county = "county"
+        case state = "state"
         case postCode = "postcode"
-        case country
+        case country = "country"
         case countryCode = "country_code"
     }
 }
@@ -41,7 +41,7 @@ public struct NameDetails: Codable {
     var nameUk: String
     
     enum CodingKeys : String, CodingKey {
-        case name
+        case name = "name"
         case nameEn = "name:en"
         case nameRu = "name:ru"
         case nameUk = "name:uk"
@@ -70,11 +70,11 @@ public struct ReversePayload: Codable {
         case latitude = "lat"
         case longitude = "lon"
         case placeRank = "place_rank"
-        case category
-        case type
+        case category = "category"
+        case type = "type"
         case addressType = "addresstype"
         case displayName = "display_name"
-        case name
+        case name = "name"
         
         case address
         case nameDetails = "namedetails"

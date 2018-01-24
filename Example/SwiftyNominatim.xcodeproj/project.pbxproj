@@ -309,11 +309,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyNominatim_Example/Pods-SwiftyNominatim_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftyNominatim/SwiftyNominatim.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyNominatim/Nominatim.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyNominatim.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nominatim.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
