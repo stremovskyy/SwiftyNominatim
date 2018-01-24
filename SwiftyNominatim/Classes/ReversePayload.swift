@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum  OSMType: String,Codable {
+public enum  OSMType: String,Codable {
     case way = "way"
 }
 
-struct Address: Codable {
+public struct Address: Codable {
     var road: String
     var subUrban: String
     var city: String
@@ -34,7 +34,7 @@ struct Address: Codable {
     }
 }
 
-struct NameDetails: Codable {
+public struct NameDetails: Codable {
     var name: String
     var nameEn: String
     var nameRu: String
@@ -47,21 +47,21 @@ struct NameDetails: Codable {
         case nameUk = "name:uk"
     }
 }
-struct ReversePayload: Codable {
+public struct ReversePayload: Codable {
     var placeID: String
     var osmType: String//OSMType
     var osmID: String
     var latitude: String
     var longitude: String
-    var placeRank: String
-    var category: String //Category
-    var type: String
-    var addressType: String
+    var placeRank: String?
+    var category: String? //Category
+    var type: String?
+    var addressType: String?
     var displayName: String
-    var name: String
+    var name: String?
     
     var address: Address
-    var nameDetails: NameDetails
+    var nameDetails: NameDetails?
     
     enum CodingKeys : String, CodingKey {
         case placeID = "place_id"

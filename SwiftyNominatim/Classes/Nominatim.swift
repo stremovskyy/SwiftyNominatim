@@ -9,18 +9,22 @@
 import Foundation
 import os.log
 
-class Nominatim {
-    var jsonString: String
+public class Nominatim {
+    var jsonString: String?
     var log = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "Nominatim")
     
-    init(jsonString: String) {
+    public init() {}
+    
+    public init(jsonString: String) {
         self.jsonString = jsonString
     }
     
-    func parseReversePayloadWith(jsonString: String) -> ReversePayload? {
+    public func parseReversePayloadWith(jsonString: String) -> ReversePayload? {
         let jsonData = jsonString.data(using: .utf8)
         let decoder = JSONDecoder()
 
+        let payloadd = try! decoder.decode(ReversePayload.self, from: jsonData!)
+        
         do {
             let payload = try decoder.decode(ReversePayload.self, from: jsonData!)
             return payload

@@ -29,6 +29,7 @@ Simple SwiftyNominatim Pod for use osm nominatim with swift 4
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
+  s.module_name = "Nominatim"
 
   s.source_files = 'SwiftyNominatim/Classes/**/*'
   
@@ -38,6 +39,5 @@ Simple SwiftyNominatim Pod for use osm nominatim with swift 4
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-    s.frameworks = 'os'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
