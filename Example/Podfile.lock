@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  SwiftyNominatim: 0d3de80fa2dab5b9ee1b89ce80d0869855b7ecdf
+  SwiftyNominatim: aeb0de16f8c719c947a33c563c7c11ebc0434a62
 
 PODFILE CHECKSUM: 68f8bfcf26736abb748ada69116a75e653d96c67
 

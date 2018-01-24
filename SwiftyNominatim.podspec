@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Simple SwiftyNominatim Pod for use osm nominatim with swift 4
                        DESC
 
   s.homepage         = 'https://github.com/Karmadon/SwiftyNominatim'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'kar_mad_on' => 'stremovskyy@me.com' }
-  s.source           = { :git => 'https://github.com/Karmadon/SwiftyNominatim', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Karmadon/SwiftyNominatim.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
@@ -38,5 +38,6 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
+    s.frameworks = 'os'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

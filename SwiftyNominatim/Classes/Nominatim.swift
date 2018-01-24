@@ -13,7 +13,6 @@ class Nominatim {
     var jsonString: String
     var log = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "Nominatim")
     
-    
     init(jsonString: String) {
         self.jsonString = jsonString
     }

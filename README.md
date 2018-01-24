@@ -1,6 +1,6 @@
 # SwiftyNominatim
 
-[![CI Status](http://img.shields.io/travis/kar_mad_on/SwiftyNominatim.svg?style=flat)](https://travis-ci.org/kar_mad_on/SwiftyNominatim)
+[![CI Status](http://img.shields.io/travis/kar_mad_on/SwiftyNominatim.svg?style=flat)](https://travis-ci.org/Karmadon/SwiftyNominatim.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/SwiftyNominatim.svg?style=flat)](http://cocoapods.org/pods/SwiftyNominatim)
 [![License](https://img.shields.io/cocoapods/l/SwiftyNominatim.svg?style=flat)](http://cocoapods.org/pods/SwiftyNominatim)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyNominatim.svg?style=flat)](http://cocoapods.org/pods/SwiftyNominatim)
