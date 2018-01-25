@@ -23,7 +23,7 @@ public class Nominatim {
     
     /// Log file
     var log = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "Nominatim")
-
+    
     /// Empty init
     public init() {}
     
@@ -78,8 +78,6 @@ public class Nominatim {
     public func parseLookupPayloadWith(jsonString: String) -> [LookupPayload]? {
         let jsonData = jsonString.data(using: .utf8)
         let decoder = JSONDecoder()
-        
-        let payloadw = try! decoder.decode([LookupPayload].self, from: jsonData!)
         
         do {
             let payload = try decoder.decode([LookupPayload].self, from: jsonData!)
