@@ -1,5 +1,5 @@
 //
-//  StraightPayload.swift
+//  LookupPayload.swift
 //  Pods
 //
 //  Created by Антон Стремовский on 25.01.2018.
@@ -8,7 +8,7 @@
 import Foundation
 
 /// Payload structure for staright geocoding
-public struct StraightPayload: Payload {
+public struct LookupPayload: Payload {
     var placeID: String
     var licence: String
     var osmType: OSMType
@@ -18,14 +18,11 @@ public struct StraightPayload: Payload {
     var displayName: String
     var address: Address?
     var nameDetails: NameDetails?
-    var boundingBox: [String]
     var extraTags: ExtraTags?
     
-    var placeRank: String?
-    var category: String?
+    var placeClass: String?
     var type: String?
-    var importance: Double?
-    var icon: String?
+    var importance: String?
     
     enum CodingKeys : String, CodingKey {
         case placeID = "place_id"
@@ -33,13 +30,10 @@ public struct StraightPayload: Payload {
         case osmID = "osm_id"
         case latitude = "lat"
         case longitude = "lon"
-        case placeRank = "place_rank"
-        case category = "category"
+        case placeClass = "class"
         case type = "type"
         case importance = "importance"
         case displayName = "display_name"
-        case icon = "icon"
-        case boundingBox = "boundingbox"
         case extraTags = "extratags"
         case address = "address"
         case nameDetails = "namedetails"

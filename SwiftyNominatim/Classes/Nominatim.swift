@@ -68,4 +68,25 @@ public class Nominatim {
         }
         return nil
     }
+    
+    /**
+     Parses String JSON and decodes it to LookupPayload data object
+     
+     - parameter jsonString: JSON String with from Lookup geocoding
+     - returns: LookupPayload object or nil if it can't be decode into LookupPayload
+     */
+    public func parseLookupPayloadWith(jsonString: String) -> [LookupPayload]? {
+        let jsonData = jsonString.data(using: .utf8)
+        let decoder = JSONDecoder()
+        
+        let payloadw = try! decoder.decode([LookupPayload].self, from: jsonData!)
+        
+        do {
+            let payload = try decoder.decode([LookupPayload].self, from: jsonData!)
+            return payload
+        } catch {
+            os_log("Cannot parse payload from Lookup packet", log: self.log, type: .error)
+        }
+        return nil
+    }
 }

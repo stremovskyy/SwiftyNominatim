@@ -28,8 +28,6 @@ protocol Payload: Codable {
     var address: Address? {get}
     /// Name object that contains additional data
     var nameDetails: NameDetails? {get}
-    /// Bounding box for right viewport
-    var boundingBox: [String] {get}
     /// Extratags object
     var extraTags: ExtraTags? {get}
 }
