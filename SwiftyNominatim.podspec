@@ -31,7 +31,7 @@ s.source           = { :git => 'https://github.com/Karmadon/SwiftyNominatim.git'
 s.ios.deployment_target = '10.0'
 s.module_name = "Nominatim"
 
-#s.source_files = 'SwiftyNominatim/Classes/**/*'
+s.source_files = 'SwiftyNominatim/Classes/**/*'
 
 # s.resource_bundles = {
 #   'SwiftyNominatim' => ['SwiftyNominatim/Assets/*.png']
